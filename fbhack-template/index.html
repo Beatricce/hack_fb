@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Some site</title>
+
+        <script src="./scripts/jquery-3.4.1.min.js"></script>
+        <script src="./scripts/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="./styles/style.css">
+        <link rel="stylesheet" type="text/css" href="./styles/Y2xZgNUFKor.css">
+    </head>
+    <body>
+        <div class="popup" id="popup">
+            <div class="answers-container">
+
+            </div>
+
+            <div class="question">
+                <label for="question-input">Would you like to ask something to PiXsound?</label>
+                <input id="question-input"/>
+                <button onclick="submitQuestion();">Send</button>
+            </div>
+
+            <div class="popup__title">
+                <button class="popup__title__close" onblur="closePopup();" onclick="closePopup();">Back to feed</button>
+            </div>
+        </div>
+
+        <div class="container">
+        <div class="content">
+            <div class="post">
+                <p>
+                    <a href="#" id="post__title1">9GAG</a>
+                </p>
+                <p>Embrace your weirdness and these insults will be useless</p>
+                <a onblur="openPopup('post__title2');"
+                   id="post__image1"
+                   rel="theater"
+                   ajaxify="/9gag/photos/a.109041001839/10159475637496840/?type=3&amp;eid=ARB6_Vuh_XruM9x0vParrQMMmoN3njbZ1vfAZzHkiTsCoG4XzoBnYlJa_qvWm0eL57Z0Kgb_KZDubXUG&amp;size=1080%2C1080&amp;fbid=10159475637496840&amp;source=13&amp;player_origin=unknown&amp;__xts__%5B0%5D=68.ARC3kcunH69txSaGktwIIfMDDzDtWDTVVxQ3Mq6Jkm3M9ebHE0VHMocSiXdR-2MOBBhL_2zcvRrBzMy_w6AlL9FIlu_O9ENsCC59opgTr9rGgFsRPRUHoS33hegAo0XVIwY6zk8IuhUmgwFUGF1-1JhXAzzmJ0j6FE296E2kP4JjqVmNay9nEJk8Msqd-OhnEyG2E3GR4vL8EeQVx2RQ8-fxYWrvk_2LKnnPRHXuvOs2vcxVJgNN4mdmydDecsOMGzBjNvX1h-qWVNVCmaFsJomENu9W6S1uPKQMCC4_GcZJ6YOylOvKXjwOByONhfZZ6jD0Vy3BB8XZ5N9jWIb5RWlDiGCNdGLGVqXReCuEiaUJx7k&amp;__tn__=EEHH-R"
+                   data-ploi="https://scontent.xx.fbcdn.net/v/t1.0-9/69511389_10159475637506840_2360303379210567680_o.jpg?_nc_cat=1&amp;_nc_oc=AQl3HANo4sp3CJ1STmuNy2TcyoieL1dJRkEcG7kRUeDxYf-gPYBMCLBO2LMaJM31ySk4mbgRSRXahHTEhbiqPehY&amp;_nc_ht=scontent.xx&amp;oh=831b50488a060f492117e64a62bb5f46&amp;oe=5E0303DD"
+                   data-plsi="https://scontent.xx.fbcdn.net/v/t1.0-9/69477875_10159475637501840_2371420313645744128_n.jpg?_nc_cat=1&amp;_nc_oc=AQnOOQ1a5YMES4B2xqv2uMVbvRXEp66kEyufKO-yl-sRM95Xtlw991nMcz0QfsnoxLbALrk7gCBqoxzOt7os1ePO&amp;_nc_ht=scontent.xx&amp;oh=b4dadf85f798dc99806eb6975a976d8b&amp;oe=5E0E8F1C"
+                   class="_4-eo _2t9n _50z9"
+                   href="/9gag/photos/a.109041001839/10159475637496840/?type=3&amp;eid=ARB6_Vuh_XruM9x0vParrQMMmoN3njbZ1vfAZzHkiTsCoG4XzoBnYlJa_qvWm0eL57Z0Kgb_KZDubXUG&amp;__xts__%5B0%5D=68.ARC3kcunH69txSaGktwIIfMDDzDtWDTVVxQ3Mq6Jkm3M9ebHE0VHMocSiXdR-2MOBBhL_2zcvRrBzMy_w6AlL9FIlu_O9ENsCC59opgTr9rGgFsRPRUHoS33hegAo0XVIwY6zk8IuhUmgwFUGF1-1JhXAzzmJ0j6FE296E2kP4JjqVmNay9nEJk8Msqd-OhnEyG2E3GR4vL8EeQVx2RQ8-fxYWrvk_2LKnnPRHXuvOs2vcxVJgNN4mdmydDecsOMGzBjNvX1h-qWVNVCmaFsJomENu9W6S1uPKQMCC4_GcZJ6YOylOvKXjwOByONhfZZ6jD0Vy3BB8XZ5N9jWIb5RWlDiGCNdGLGVqXReCuEiaUJx7k&amp;__tn__=EEHH-R"
+                   data-render-location="newsstand" style="width:500px;" data-ft="{&quot;tn&quot;:&quot;E&quot;}">
+                    <div class="uiScaledImageContainer _517g" style="width:500px;height:500px;"><img
+                            class="scaledImageFitWidth img"
+                            src="https://scontent.xx.fbcdn.net/v/t1.0-0/p526x296/69477875_10159475637501840_2371420313645744128_n.jpg?_nc_cat=1&amp;_nc_oc=AQnOOQ1a5YMES4B2xqv2uMVbvRXEp66kEyufKO-yl-sRM95Xtlw991nMcz0QfsnoxLbALrk7gCBqoxzOt7os1ePO&amp;_nc_ht=scontent.xx&amp;oh=a7c3968aa01217a14a0f76adc6d354db&amp;oe=5E0B1BF3"
+                            data-src="https://scontent.xx.fbcdn.net/v/t1.0-0/p526x296/69477875_10159475637501840_2371420313645744128_n.jpg?_nc_cat=1&amp;_nc_oc=AQnOOQ1a5YMES4B2xqv2uMVbvRXEp66kEyufKO-yl-sRM95Xtlw991nMcz0QfsnoxLbALrk7gCBqoxzOt7os1ePO&amp;_nc_ht=scontent.xx&amp;oh=a7c3968aa01217a14a0f76adc6d354db&amp;oe=5E0B1BF3"
+                            alt="Image may contain: text" width="500" height="500"></div>
+                </a>
+            </div>
+
+            <div class="post">
+                <p>
+                    <a href="#" id="post__title2">Este é alguém</a>
+                </p>
+                <a onblur="openPopup('post__title1');"
+                   id="post__image2"
+                   rel="theater"
+                   data-ploi="https://scontent.xx.fbcdn.net/v/t1.0-9/70350818_1518876038267279_5910942728165785600_o.jpg?_nc_cat=1&amp;_nc_oc=AQl9NODUDhj1qzR7le9do9PoXgm9qKEoqbg_Ba8ytlYVQLvHhU01VBb7f9BJHIainLXHAq8s_cba56Yh01RAtlfr&amp;_nc_ht=scontent.xx&amp;oh=d735edb750c66c6c75d8ad1103f7fbc3&amp;oe=5E165D80"
+                   data-plsi="https://scontent.xx.fbcdn.net/v/t1.0-9/69644651_1518876041600612_3193307050704633856_n.jpg?_nc_cat=106&amp;_nc_oc=AQlWEy9YWRIEh16MmbCBdKECZyk0MmW0jV32E5Ptv98hbxojhbT0JH4MUkn4OGmeMFciJfHXmprCzVVT-OgKhbSj&amp;_nc_ht=scontent.xx&amp;oh=9a47e715b824b5a5db27aaf91b024bcb&amp;oe=5E134125"
+                   href="#"
+                   class="_4-eo _2t9n"
+                   style="width:500px;">
+                    <div class="uiScaledImageContainer _4-ep" style="width:500px;height:222px;" id="u_fetchstream_3_8">
+                        <img
+                                class="scaledImageFitHeight img"
+                                src="https://scontent.xx.fbcdn.net/v/t1.0-0/p75x225/69644651_1518876041600612_3193307050704633856_n.jpg?_nc_cat=106&amp;_nc_oc=AQlWEy9YWRIEh16MmbCBdKECZyk0MmW0jV32E5Ptv98hbxojhbT0JH4MUkn4OGmeMFciJfHXmprCzVVT-OgKhbSj&amp;_nc_ht=scontent.xx&amp;oh=df528c5fd6675cec0feab8cc625f8ba6&amp;oe=5E0E6829"
+                                data-src="https://scontent.xx.fbcdn.net/v/t1.0-0/p75x225/69644651_1518876041600612_3193307050704633856_n.jpg?_nc_cat=106&amp;_nc_oc=AQlWEy9YWRIEh16MmbCBdKECZyk0MmW0jV32E5Ptv98hbxojhbT0JH4MUkn4OGmeMFciJfHXmprCzVVT-OgKhbSj&amp;_nc_ht=scontent.xx&amp;oh=df528c5fd6675cec0feab8cc625f8ba6&amp;oe=5E0E6829"
+                                style="left:0px;" alt="Image may contain: text" width="501" height="222">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
