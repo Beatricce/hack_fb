@@ -6,21 +6,19 @@ function openPopup(_nextSelector) {
     }
 
     nextSelector = _nextSelector;
+    isOpen = true;
 
-    $('#popup').fadeIn(function() {
-        $('#question-input').focus();
-        isOpen = true;
-    });
+    $('#popup').fadeIn();
+    $('#question-input').focus();
 }
 
 function closePopup() {
-    $('#popup').fadeOut(function() {
-        $(`#${nextSelector}`).focus();
-        isOpen = false;
-        nextSelector = '';
+    $('#popup').fadeOut();
+    $(`#${nextSelector}`).focus();
+    isOpen = false;
+    nextSelector = '';
 
-        $('.answers-container').html('');
-    });
+    $('.answers-container').html('');
 }
 
 function submitQuestion() {
@@ -28,21 +26,32 @@ function submitQuestion() {
     let question = questionInput.value;
     questionInput.value = '';
 
+    console.log(formatSpaces(question));
+
     $.getJSON('./mock.json', function(data) {
         const answer = extractAnswer(data);
-        addAnswer(answer);
+        addAnswer(answer, question);
     });
+}
+
+function formatSpaces(str) {
+    return str.replace(/[ ]/g, '%20');
 }
 
 function extractAnswer(data) {
     return data.answer;
 }
 
-function addAnswer(answer) {
+function addAnswer(answer, question) {
     $('.answers-container').append(
-        `<p><a class="answer" href="#">${answer}</a></p>`
+        ` <p class="chat__question-p"><a class="chat__question" href="javascript:void();" title="${question}">${question}</a></p>
+         <p><a class="chat__answer" href="javascript:void();" title="${answer}">${answer}</a></p>`
     );
-    const answers = $('.answer');
+    const answers = $('.chat__answer');
 
     answers[answers.length - 1].focus();
+}
+
+function focusFirstQuestion() {
+    $('.chat__question')[0].focus();
 }

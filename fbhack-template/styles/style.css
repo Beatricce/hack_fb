@@ -8,6 +8,17 @@
     justify-content: center;
 }
 
+.post {
+    padding: 8px 16px;
+    box-shadow: 1px 1px 5px 0 #ccc;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.post p {
+    margin-top: 0;
+}
+
 .image-link img {
     width: 500px;
 }
@@ -16,10 +27,14 @@
     width: 450px;
     height: 500px;
 
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
     position: fixed;
     right: 8px;
     bottom: 0;
 
+    background-color: #ddd;
     box-shadow: -1px -1px 5px 0 #ccc;
     border: 1px solid #ddd;
 
@@ -31,11 +46,15 @@
     top: 0;
     left: 0;
 
-    padding: 8px 16px;
+    padding: 16px 8px;
+}
+
+.popup__title__button {
+    padding: 8px;
 }
 
 .popup__title__close {
-    padding: 8px;
+    float: left;
 }
 
 .question {
@@ -62,4 +81,13 @@
 .answers-container {
     margin-top: 56px;
     padding: 0 8px;
+}
+
+.chat__answer, .chat__question {
+    text-decoration: none;
+    color: #000;
+}
+
+.chat__question-p {
+    text-align: end;
 }
